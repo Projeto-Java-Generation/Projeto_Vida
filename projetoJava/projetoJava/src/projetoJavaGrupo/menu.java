@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class menu {
 	public static void main(String[] args) {
 		Scanner leia = new Scanner(System.in);
-				String [] Produtos = {"Cesta Básica ", "Agasalho ", "Agua "};
+				String [] Produtos = {"Cesta Básica ", "Agasalho ", "Água "};
 				int [] quantidade = {10, 10,10};
 				int idProduto=0, quant=0, opcao=0;
 
@@ -73,8 +73,30 @@ public class menu {
 
 				break;
 			case 2:
+				
+				String [] ProdutosZS = {"Cesta Básica ", "Agasalho ", "Água "};
+				int [] quantidade = {10, 10,10};
+				int idProduto=0, quant=0, opcao=0;
+				
 				System.out.println("2 - SOLICITAR DOAÇÃO.");
-
+				System.out.println("\nPor favor, selecione o produto que deseja solicitar: ");
+				System.out.println("\n1 - Cesta básica");
+				System.out.println("\n2 - Agasalho");
+				System.out.println("\n3 - Água");
+				idProduto = leia.nextInt();
+				System.out.println("\nO nosso estoque deste produto é: "+quantidade);
+				System.out.println("\nDigite a quantidade desejada:");
+				quant = leian.nextInt();
+				
+				if (quant <= quantidade){ 
+					
+					System.out.println("\nDoação solicitada! Por favor retire no endereço abaixo: ");
+					System.out.println("\n[insira o endereço da ong aqui]");
+				} else {
+					System.out.println("\nInfelizmente não temos estoque suficiente desse produto");
+				}
+				
+				
 				break;
 			case 3:
 				System.out.println("3 - INFORMAÇÕES ÚTEIS.");
