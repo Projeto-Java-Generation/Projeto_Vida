@@ -11,7 +11,7 @@ public class menu {
 		int[] quantidade = { 10, 10, 10 };
 		int idProduto = 0, quant = 0;
 
-		String zona = "1 - Zona Leste\n2 - Centro\n3 - Zona Oeste\n4 - Zona Sul\n5 - Zona Norte";
+		String zona = "1 - Zona Leste\n2 - Zona Oeste\n3 - Zona Sul\n4 - Zona Norte";
 		String nome, tel, doc, localizacao = "";
 		int opcao, localb;
 
@@ -21,10 +21,18 @@ public class menu {
 		List<Estoque> estoqueZonaSul = new ArrayList<Estoque>();
 		estoqueZonaSul.add(new Estoque("Água", 1));
 		estoqueZonaSul.add(new Estoque("Agasalho", 5));
+		List<Estoque> estoqueZonaNorte = new ArrayList<Estoque>();
+		estoqueZonaSul.add(new Estoque("Água", 1));
+		estoqueZonaSul.add(new Estoque("Agasalho", 5));
+		List<Estoque> estoqueZonaOeste = new ArrayList<Estoque>();
+		estoqueZonaSul.add(new Estoque("Água", 1));
+		estoqueZonaSul.add(new Estoque("Agasalho", 5));
 
 		List<Ong> ongs = new ArrayList<Ong>();
-		ongs.add(new Ong("nomeA", "telefoneA", "documentoA", "localizacaoA", estoqueZonaLeste));
-		ongs.add(new Ong("nomeB", "telefoneB", "documentoB", "localizacaoB", estoqueZonaSul));
+		ongs.add(new Ong("Doa + Brasil", "11-1234-5678", "40.545.193/0001-00", "Zona Leste", estoqueZonaLeste));
+		ongs.add(new Ong("Vidas que importam", "11-8765-4321", "89.848.378/0001-00", "Zona Oeste", estoqueZonaOeste));
+		ongs.add(new Ong("Pro vida", "11 1234-1234", "15.904.852/0001-00", "Zona Sul", estoqueZonaSul));
+		ongs.add(new Ong("Geração Guerreiro", "11 1234-1234", "18.953.214/0001-00", "Zona Norte", estoqueZonaNorte));
 		/*for (Ong ong : ongs) {
 			System.out.println("Nome: " + ong.getNomePessoa());
 			System.out.println("Telefone: " + ong.getTelefone());
@@ -55,6 +63,15 @@ public class menu {
 		localb = leia.nextInt();
 		if (localb == 1) {
 			localizacao = "Zona Leste";
+		}
+		if (localb == 2) {
+			localizacao = "Zona Oeste";
+		}
+		if (localb == 3) {
+			localizacao = "Zona Sul";
+		}
+		if (localb == 4) {
+			localizacao = "Zona Norte";
 		}
 
 		Pessoa pessoa1 = new Pessoa(nome, doc, tel, localizacao);
@@ -101,7 +118,19 @@ public class menu {
 				} while (quant < 1);
 
 				quantidade[idProduto - 1] += quant;
-				estoqueZonaLeste.add(new Estoque(Produtos[idProduto - 1], quant));
+				
+				if(localb==1){
+					estoqueZonaLeste.add(new Estoque(Produtos[idProduto - 1], quant));
+				}
+				if(localb==2){
+					estoqueZonaOeste.add(new Estoque(Produtos[idProduto - 1], quant));
+				}
+				if(localb==3){
+					estoqueZonaSul.add(new Estoque(Produtos[idProduto - 1], quant));
+				}
+				if(localb==4){
+					estoqueZonaNorte.add(new Estoque(Produtos[idProduto - 1], quant));
+				}
 
 				for (Ong ong : ongs) {
 					List<Estoque> estoqueOng = ong.getEstoque();
@@ -110,7 +139,7 @@ public class menu {
 							System.out.println("\nObrigade! " + nome
 									+ " por sua contribuicao, ela vai fazer a diferenca na vida de alguem!");
 							System.out.println(
-									"\nFoi doado " + estoque.getQuantidade() + " do produto " + estoque.getNome());
+									"\nFoi doado " + estoque.getQuantidade() + " do produto " + estoque.getNome()+ "para a ONG: "+ong.getNomePessoa());
 							System.out.println("\nVeja como ficou nosso estoque depois da sua contribuicao");
 
 							// System.out.println("O item " + estoque.getNome() + " está disponível na ONG "
