@@ -33,19 +33,21 @@ public class menu {
 		ongs.add(new Ong("Vidas que importam", "11-8765-4321", "89.848.378/0001-00", "Zona Oeste", estoqueZonaOeste));
 		ongs.add(new Ong("Pro vida", "11 1234-1234", "15.904.852/0001-00", "Zona Sul", estoqueZonaSul));
 		ongs.add(new Ong("Geração Guerreiro", "11 1234-1234", "18.953.214/0001-00", "Zona Norte", estoqueZonaNorte));
-		/*for (Ong ong : ongs) {
-			System.out.println("Nome: " + ong.getNomePessoa());
-			System.out.println("Telefone: " + ong.getTelefone());
-			System.out.println("CNPJ: " + ong.getDocumento());
-			System.out.println("Localização: " + ong.getLocalizacao());
-			System.out.println("Estoque:");
-			List<Estoque> estoqueOng = ong.getEstoque();
-			for (Estoque estoque : estoqueOng) {
-				System.out.println("- " + estoque.getNome() + ": " + estoque.getQuantidade());
-			}
-			System.out.println();
-		}
-		*/
+		/*
+		 * for (Ong ong : ongs) {
+		 * System.out.println("Nome: " + ong.getNomePessoa());
+		 * System.out.println("Telefone: " + ong.getTelefone());
+		 * System.out.println("CNPJ: " + ong.getDocumento());
+		 * System.out.println("Localização: " + ong.getLocalizacao());
+		 * System.out.println("Estoque:");
+		 * List<Estoque> estoqueOng = ong.getEstoque();
+		 * for (Estoque estoque : estoqueOng) {
+		 * System.out.println("- " + estoque.getNome() + ": " +
+		 * estoque.getQuantidade());
+		 * }
+		 * System.out.println();
+		 * }
+		 */
 
 		System.out.println("-----------------------------------------------------");
 		System.out.println("                                                     ");
@@ -118,17 +120,17 @@ public class menu {
 				} while (quant < 1);
 
 				quantidade[idProduto - 1] += quant;
-				
-				if(localb==1){
+
+				if (localb == 1) {
 					estoqueZonaLeste.add(new Estoque(Produtos[idProduto - 1], quant));
 				}
-				if(localb==2){
+				if (localb == 2) {
 					estoqueZonaOeste.add(new Estoque(Produtos[idProduto - 1], quant));
 				}
-				if(localb==3){
+				if (localb == 3) {
 					estoqueZonaSul.add(new Estoque(Produtos[idProduto - 1], quant));
 				}
-				if(localb==4){
+				if (localb == 4) {
 					estoqueZonaNorte.add(new Estoque(Produtos[idProduto - 1], quant));
 				}
 
@@ -139,7 +141,8 @@ public class menu {
 							System.out.println("\nObrigade! " + nome
 									+ " por sua contribuicao, ela vai fazer a diferenca na vida de alguem!");
 							System.out.println(
-									"\nFoi doado " + estoque.getQuantidade() + " do produto " + estoque.getNome()+ "para a ONG: "+ong.getNomePessoa());
+									"\nFoi doado " + estoque.getQuantidade() + " do produto " + estoque.getNome()
+											+ "para a ONG: " + ong.getNomePessoa());
 							System.out.println("\nVeja como ficou nosso estoque depois da sua contribuicao");
 
 							// System.out.println("O item " + estoque.getNome() + " está disponível na ONG "
@@ -154,10 +157,46 @@ public class menu {
 				break;
 			case 2:
 				System.out.println("2 - SOLICITAR DOAÇÃO.");
+				System.out.println("\nPor favor, selecione o produto que deseja solicitar: ");
+
+				for (int i = 0; i < 3; i++) {
+					System.out.println((i + 1) + " " + Produtos[i] + " = " + quantidade[i]);
+				}
+				while (idProduto <= 0 || idProduto > 3) {
+
+					System.out.println("Selecione o produto que deseja solicitar: ");
+					idProduto = leia.nextInt();
+
+				}
+				System.out.println("\nDigite a quantidade desejada:");
+				quant = leia.nextInt();
+				quantidade[idProduto - 1] -= quant;
+				System.out.println("\nDoação solicitada! Confira nosso estoque atual ");
+				for (int i = 0; i < 3; i++) {
+					System.out.println((i + 1) + " " + Produtos[i] + " = " + quantidade[i]);
+				}
+				System.out.println("\nPor favor retire sua doação no endereço abaixo: ");
+
+				if (localb == 1) {
+					System.out.println("\nDoa Brasil, 11-1234-5678. Av. Itaquera, 1000");
+				}
+				if (localb == 2) {
+					System.out.println("\nVidas que importam, 11-8765-4321. Av. Paulista, 5000");
+				}
+				if (localb == 3) {
+					System.out.println("\nPró Vida, 11 1234-1234. Av. Belmira Marim, 510");
+				}
+				if (localb == 4) {
+					System.out.println("\nGeração Guerreiro, 11 1234-1234. Av. Cruzeiro do Sul, 1000");
+				}
 				break;
 
 			case 3:
 				System.out.println("3 - INFORMAÇÕES ÚTEIS.");
+				System.out.println("\nO Projeto Vida é um programa desenvolvido para facilitar a doação de doadores por ONGs próximas."
+				+"O programa visa promover a solidariedade entre as pessoas, contribuindo para um mundo mais justo e solidário." 
+				+"Com o Projeto Vida, a doação se torna mais fácil e acessível, contribuindo para melhorar a qualidade de vida de quem mais precisa."
+				+"\nO projeto foi desenvolvido pela equipe composta por: Erenilda Tavares, Juliana Lopes, Larissa Senezio, Mariane Anjos, Renan Gonçalves e Renato Nunes");
 				break;
 
 			case 4:
@@ -171,7 +210,6 @@ public class menu {
 				String docOng = leia.nextLine();
 				System.out.println(zona + "\nDigite o nº referente a  localização da ONG:");
 				int localizacaoZ = leia.nextInt();
-				localizacao = "";
 				switch (localizacaoZ) {
 					case 1:
 						localizacao = "Zona Leste";
@@ -201,7 +239,6 @@ public class menu {
 			default:
 				System.out.println("\nOpção Inválida!\n");
 				break;
-
 		}
 	}
 }
