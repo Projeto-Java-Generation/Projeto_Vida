@@ -49,7 +49,8 @@ Sistema desenvolvido em Java utilizando os conceitos de Programação Orientada 
 ```
   
 ## 💟 Agradecimentos ##
-**É o Grupo <>!**
+**É o Grupo 7!**
+ 
 Enquanto nos aprofundávamos no desenvolvimento do projeto, criamos um ambiente de trabalho colaborativo, onde cada um contribuiu com suas habilidades únicas e perspectivas individuais. As reuniões foram um lugar para discussões acaloradas e ideias inovadoras, e as entregas foram momentos de orgulho e satisfação pelo trabalho duro realizado.
 
 Mas não foram apenas as conquistas técnicas que fizeram desta experiência algo especial. O Projeto Vida foi um ponto de encontro para pessoas que se conheciam pouco, mas que compartilhavam o mesmo espírito de solidariedade e empatia. Rimos juntos, aprendemos uns com os outros e nos tornamos uma equipe unida e coesa.
