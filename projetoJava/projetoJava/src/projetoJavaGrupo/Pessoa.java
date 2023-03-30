@@ -67,8 +67,8 @@ public class Pessoa {
 
 
 	public void exibir() {
-		System.out.println("\nSeus Dados: "+"Nome: " + nomePessoa + ", telefone de nº: " + telefone
-				+ ", identidade de nº: " + documento+ " e Localização: "+localizacao);
+		System.out.println("\n\tSeus Dados:\n"+"Nome: " + nomePessoa + "\nTelefone de Nº: " + telefone
+				+ "\nIdentidade de nº: " + documento+ "\nLocalização: "+localizacao);
 	}
 
 }
