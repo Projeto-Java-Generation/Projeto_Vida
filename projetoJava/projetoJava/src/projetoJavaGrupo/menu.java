@@ -36,6 +36,7 @@ public class menu {
 		ongs.add(new Ong("Vidas que importam", "11-8765-4321", "89.848.378/0001-00", "Zona Oeste", estoqueZonaOeste));
 		ongs.add(new Ong("Pro vida", "11 1234-1234", "15.904.852/0001-00", "Zona Sul", estoqueZonaSul));
 		ongs.add(new Ong("Geração Guerreiro", "11 1234-1234", "18.953.214/0001-00", "Zona Norte", estoqueZonaNorte));
+
 		System.out.println(Cor.TEXT_BLUE_BOLD
 				+ "                                                                                  ");
 		System.out.println("                                                                                 ");
@@ -71,6 +72,7 @@ public class menu {
 		// System.out.println(Cor.TEXT_GREEN_BOLD+
 		// "===============================================================================================");
 		System.out.println(Cor.TEXT_GREEN_BOLD +
+
 				"  8888888b.                     d8b          888            888     888 d8b      888           ");
 		System.out.println(
 				"  888   Y88b                    Y8P          888            888     888 Y8P      888           ");
@@ -94,6 +96,7 @@ public class menu {
 				"                             888P                                                              ");
 		System.out.println(
 				"===============================================================================================");
+
 		System.out.println(Cor.TEXT_WHITE_UNDERLINED + "\nDigite seu nome:" + Cor.ANSI_RESET + Cor.TEXT_RESET);
 
 		nome = leia.nextLine();
@@ -123,6 +126,7 @@ public class menu {
 		 * System.out.println(zona);
 		 * System.out.println("\nEscolha sua localização                            ");
 		 */
+
 		localb = leia.nextInt();
 		if (localb == 1) {
 			localizacao = "Zona Leste";
@@ -146,6 +150,7 @@ public class menu {
 
 			System.out.println(Cor.TEXT_CYAN
 					+ "-----------------------------------------------------");
+
 			System.out.println("                                                     ");
 			System.out.println("                      Bem-vinde!                     ");
 			System.out.println("-----------------------------------------------------");
@@ -158,6 +163,7 @@ public class menu {
 			System.out.println("-----------------------------------------------------");
 			System.out.println("                                                     ");
 			System.out.println("            Digite a opção desejada:                 ");
+
 			System.out.println("-----------------------------------------------------" + Cor.TEXT_RESET);
 
 			opcao = leia.nextInt();
@@ -181,6 +187,7 @@ public class menu {
 						for (int i = 0; i < 3; i++) {
 							System.out.println((i + 1) + " " + Produtos[i]);
 						}
+
 						do {
 							try {
 								System.out.println("\tSelecione o produto que deseja doar: ");
@@ -192,6 +199,7 @@ public class menu {
 							}
 							continuarCaseB = true;
 						} while (continuarCaseB);
+
 						if (idProduto < 1 || idProduto > Produtos.length) {
 							System.out.println("ID do produto não válido!");
 						}

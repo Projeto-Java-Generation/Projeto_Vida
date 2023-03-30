@@ -37,10 +37,11 @@ public class Pessoa {
 	public void setDocumento(String documento) {
 		this.documento = documento;
 	}
-
+  
 	public String getLocalizacao() {
 		return localizacao;
 	}
+
 
 	public void setLocalizacao(String localizacao) {
 		this.localizacao = localizacao;

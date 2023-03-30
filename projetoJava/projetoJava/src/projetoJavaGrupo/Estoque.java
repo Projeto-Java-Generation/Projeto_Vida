@@ -2,6 +2,7 @@ package projetoJavaGrupo;
 
 public class Estoque {
 	private String nome;
+
 	private int quantidade;
 
 	public Estoque(String nome, int quantidade) {
@@ -21,7 +22,7 @@ public class Estoque {
 	public int getQuantidade() {
 		return quantidade;
 	}
-
+  
 	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
 	}
