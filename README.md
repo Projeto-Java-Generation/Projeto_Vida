@@ -1,5 +1,7 @@
-<Logo>
- 
+<p align="center">
+<img src="https://github.com/Projeto-Java-Generation/Projeto_Vida/blob/main/logo_projeto_java%20.png">
+</p>
+
  ## Projeto Java ##
 
 Este projeto faz parte da finalização do Bloco 1 do Bootcamp Full-Stack Java da turma 63 [Generation Brasil](https://brazil.generation.org/).
