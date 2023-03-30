@@ -16,7 +16,7 @@ Aqui aplicamos os conceitos de:
 - Exceptions
 
 ## Sobre o tema  
-### 🍧 Projeto Vida ###
+### 🐦 Projeto Vida
 O Projeto Vida é um programa Java desenvolvido para facilitar a doação de doadores por ONGs próximas. O programa visa promover a solidariedade entre as pessoas, contribuindo para um mundo mais justo e solidário. Com o Projeto Vida, a doação se torna mais fácil e acessível, contribuindo para melhorar a qualidade de vida de quem mais precisa.
   
 ### 📑 Funcionalidades
