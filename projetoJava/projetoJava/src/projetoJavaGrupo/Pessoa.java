@@ -5,11 +5,13 @@ public class Pessoa {
 	private String nomePessoa;
 	private String telefone;
 	private String documento;
+	private String localizacao;
 
-	public Pessoa(String nomePessoa, String telefone, String documento) {
+	public Pessoa(String nomePessoa, String telefone, String documento, String localizacao) {
 		this.nomePessoa = nomePessoa;
 		this.telefone = telefone;
 		this.documento = documento;
+		this.localizacao = localizacao;
 	}
 
 	public String getNomePessoa() {
@@ -36,9 +38,17 @@ public class Pessoa {
 		this.documento = documento;
 	}
 
+	public String getLocalizacao() {
+		return localizacao;
+	}
+
+	public void setLocalizacao(String localizacao) {
+		this.localizacao = localizacao;
+	}
+
 	public void exibir() {
-		System.out.println("\nSeus Dados: "+"Nome: " + nomePessoa + ", telefone de nº: " + telefone
-				+ " e identidade de nº: " + documento);
+		System.out.println("\n\tSeus Dados:\n" + "Nome: " + nomePessoa + "\nTelefone de Nº: " + telefone
+				+ "\nIdentidade de Nº: " + documento + "\nLocalização: " + localizacao);
 	}
 
 }
