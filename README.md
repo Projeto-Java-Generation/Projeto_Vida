@@ -29,8 +29,8 @@ Sistema desenvolvido em Java utilizando os conceitos de Programação Orientada 
 <gif>
  
 ### 💻 Desenvolvedores
-[<img src="https://avatars.githubusercontent.com/u/115853196?s=96&v=4" width=170 > <br> <sub> Renato Nunes </sub>](https://github.com/renatonunes74) | [<img src="https://avatars.githubusercontent.com/u/118860220?v=4" width=170 > <br> <sub> Erenilda Tavares </sub>](https://github.com/ErenildaTavares) | [<img src="https://avatars.githubusercontent.com/u/100323487?v=4" width=170 > <br> <sub> Mariane Anjos </sub>](https://github.com/MarianeAnjos) | [<img src="https://avatars.githubusercontent.com/u/123598080?v=4" width=170 > <br> <sub> Larissa Senezio </sub>](https://github.com/lariaparecida) | [<img src="https://avatars.githubusercontent.com/u/127238370?v=4" width=170 > <br> <sub> Renan Gonçalves </sub>](https://github.com/RenanG7)
-| :---: | :---: | :---: | :---: | :---: |
+[<img src="https://avatars.githubusercontent.com/u/115853196?s=96&v=4" width=170 > <br> <sub> Renato Nunes </sub>](https://github.com/renatonunes74) | [<img src="https://avatars.githubusercontent.com/u/118860220?v=4" width=170 > <br> <sub> Juliana Lopes </sub>](https://github.com/renatonunes74) | [<img src="https://avatars.githubusercontent.com/u/123598080?v=4" width=170 > <br> <sub> Erenilda Tavares </sub>](https://github.com/ErenildaTavares) | [<img src="https://avatars.githubusercontent.com/u/100323487?v=4" width=170 > <br> <sub> Mariane Anjos </sub>](https://github.com/MarianeAnjos) | [<img src="https://avatars.githubusercontent.com/u/127221886?v=4" width=170 > <br> <sub> Larissa Senezio </sub>](https://github.com/lariaparecida) | [<img src="https://avatars.githubusercontent.com/u/127238370?v=4" width=170 > <br> <sub> Renan Gonçalves </sub>](https://github.com/RenanG7)
+| :---: | :---: | :---: | :---: | :---: | :---: |
 
 ### 📏 Organização do projeto
 ```
