@@ -3,6 +3,9 @@ package projetoJavaGrupo;
 import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
+/*import java.util.InputMismatchException;
+import java.io.IOException;*/
+import projetoJavaGrupo.Cor;
 
 public class menu {
 	public static void main(String[] args) {
@@ -33,25 +36,43 @@ public class menu {
 		ongs.add(new Ong("Vidas que importam", "11-8765-4321", "89.848.378/0001-00", "Zona Oeste", estoqueZonaOeste));
 		ongs.add(new Ong("Pro vida", "11 1234-1234", "15.904.852/0001-00", "Zona Sul", estoqueZonaSul));
 		ongs.add(new Ong("Geração Guerreiro", "11 1234-1234", "18.953.214/0001-00", "Zona Norte", estoqueZonaNorte));
-		/*
-		 * for (Ong ong : ongs) {
-		 * System.out.println("Nome: " + ong.getNomePessoa());
-		 * System.out.println("Telefone: " + ong.getTelefone());
-		 * System.out.println("CNPJ: " + ong.getDocumento());
-		 * System.out.println("Localização: " + ong.getLocalizacao());
-		 * System.out.println("Estoque:");
-		 * List<Estoque> estoqueOng = ong.getEstoque();
-		 * for (Estoque estoque : estoqueOng) {
-		 * System.out.println("- " + estoque.getNome() + ": " +
-		 * estoque.getQuantidade());
-		 * }
-		 * System.out.println();
-		 * }
-		 */
 
-		System.out.println(
-				"===============================================================================================");
-		System.out.println(
+		System.out.println(Cor.TEXT_BLUE_BOLD
+				+ "                                                                                  ");
+		System.out.println("                                                                                 ");
+		System.out.println("          GYG#&                                                                  ");
+		System.out.println("           G??JYPB    &                                                          ");
+		System.out.println("            #Y????YP# #B#&                                                       ");
+		System.out.println("              5?????JYG##GG#                                                     ");
+		System.out.println("               GJ???JJJJ5B#GPG#                                                  ");
+		System.out.println("                 #GYJ??JJJYPB#P5G&                                               ");
+		System.out.println("                  &##BPYJJJJJP#&G55B&                                            ");
+		System.out.println("                  &PJ5GBGPYJJJJP& #P5PB&            &&##B#&&&               &&&#&");
+		System.out.println("                    #Y??JYPGG5YJJ5# &B55P#       &#&BGGGPPPGGBB& &&&###BBGGBB##& ");
+		System.out.println("                      GJ???JYPBBPYJ5#  &G55#   #G55PG#  && &    &GPGGGB##&       ");
+		System.out.println("                       &G5YJ??JYPBBG5P# #&#G# BY5PB##&#GPBBPGGB  &B#             ");
+		System.out.println("                         &PGGP5YJJYG##GG#GPB&&G#&#BPGB5#P5PPB& &BG#              ");
+		System.out.println("                          BJJ5PGBGP5Y5GB  #PYG#G55YG#55G#P#&&BGPB&               ");
+		System.out.println("                           &5???JY5GGBGPPG# #YYYYYG&555P   B5PP&                 ");
+		System.out.println("                             BGP555YYY5PGBBB #YYYG PY55#   B5P&                  ");
+		System.out.println("                      &#BB#    #PPPPGGGGGGGB  #YP G5PBB&   PP&                   ");
+		System.out.println("      &&&&         &5J77JG& #GB#&BGPPP555GB&   GB BBGP5G   G#                    ");
+		System.out.println("  BJ& #GP5YJJJY5GB  BGGB  #5????JYYY5PG# &   #5Y& GYY5Y5                         ");
+		System.out.println("&#5!7P &B##BGGBBGGP5YP  GJ?7?????JYPPGGPYJB#5JJG GYYY5G&                         ");
+		System.out.println("#B#&&#  G?!JB B?!!7JB#P?777??J5PGGP5JJ??JJ#PJ5# GYYYP&                           ");
+		System.out.println("   #BPP& YG  BYPG#& PJY5PG##&  #P5YJJJY5PG BB#GYJYP&                             ");
+		System.out.println(" &Y7?5#  &     #B        &##        &##B& &B5Y5PB&                               ");
+		System.out.println("  #    PJ5B&G5YYBB55Y5YJJ5B& &#BGP5YJY5B&BGB#&                                   ");
+		System.out.println("    &##GG#&##&  57!!77?JP&   ########&                                           ");
+		System.out.println("    &BGPY5B   #Y???77?P#                                                         ");
+		System.out.println("            #J~~~!7JG                                                            ");
+		System.out.println("          BY!7J5G#&                                                              ");
+		System.out.println("         &GB&                                                                    \n");
+
+		// System.out.println(Cor.TEXT_GREEN_BOLD+
+		// "===============================================================================================");
+		System.out.println(Cor.TEXT_GREEN_BOLD +
+
 				"  8888888b.                     d8b          888            888     888 d8b      888           ");
 		System.out.println(
 				"  888   Y88b                    Y8P          888            888     888 Y8P      888           ");
@@ -75,14 +96,37 @@ public class menu {
 				"                             888P                                                              ");
 		System.out.println(
 				"===============================================================================================");
-		System.out.println("\nDigite seu nome:                                   ");
+
+		System.out.println(Cor.TEXT_WHITE_UNDERLINED + "\nDigite seu nome:" + Cor.ANSI_RESET + Cor.TEXT_RESET);
+
 		nome = leia.nextLine();
-		System.out.println("\nDigite o nº do documento de identidade:            ");
+
+		System.out.println(Cor.TEXT_WHITE_UNDERLINED + "\nDigite o nº do documento de identidade:" + Cor.ANSI_RESET
+				+ Cor.TEXT_RESET);
+
 		doc = leia.nextLine();
-		System.out.println("\nDigite o nº do telefone:                           ");
+
+		System.out.println(Cor.TEXT_WHITE_UNDERLINED + "\nDigite o nº do telefone:" + Cor.ANSI_RESET + Cor.TEXT_RESET);
+
 		tel = leia.nextLine();
+
 		System.out.println(zona);
-		System.out.println("\nEscolha sua localização                            ");
+
+		System.out.println(Cor.TEXT_WHITE_UNDERLINED + "\nEscolha sua localização" + Cor.ANSI_RESET + Cor.TEXT_RESET);
+
+		/*
+		 * System.out.println(Cor.
+		 * TEXT_WHITE+"\nDigite seu nome:                                   "+Cor.
+		 * TEXT_RESET);
+		 * nome = leia.nextLine();
+		 * System.out.println("\nDigite o nº do documento de identidade:            ");
+		 * doc = leia.nextLine();
+		 * System.out.println("\nDigite o nº do telefone:                           ");
+		 * tel = leia.nextLine();
+		 * System.out.println(zona);
+		 * System.out.println("\nEscolha sua localização                            ");
+		 */
+
 		localb = leia.nextInt();
 		if (localb == 1) {
 			localizacao = "Zona Leste";
@@ -103,7 +147,10 @@ public class menu {
 		boolean continuar = true, continuarCaseB = true;
 		do {
 			continuar = true;
-			System.out.println("-----------------------------------------------------");
+
+			System.out.println(Cor.TEXT_CYAN
+					+ "-----------------------------------------------------");
+
 			System.out.println("                                                     ");
 			System.out.println("                      Bem-vinde!                     ");
 			System.out.println("-----------------------------------------------------");
@@ -116,7 +163,8 @@ public class menu {
 			System.out.println("-----------------------------------------------------");
 			System.out.println("                                                     ");
 			System.out.println("            Digite a opção desejada:                 ");
-			System.out.println("-----------------------------------------------------");
+
+			System.out.println("-----------------------------------------------------" + Cor.TEXT_RESET);
 
 			opcao = leia.nextInt();
 
@@ -139,19 +187,19 @@ public class menu {
 						for (int i = 0; i < 3; i++) {
 							System.out.println((i + 1) + " " + Produtos[i]);
 						}
-						/*
-						 * if (idProduto < 1 || idProduto > Produtos.length) {
-						 * System.out.println("ID do produto não válido!");
-						 * }
-						 * 
-						 * System.out.println("\nDigite a quantidade desejada:");
-						 * quant = leia.nextInt();
-						 * if (quant < 1 || quant > quantidade[idProduto]) {
-						 * System.out.println("Quantidade inserida não válida!");
-						 * }
-						 */
-						System.out.println("\tSelecione o produto que deseja doar: ");
-						idProduto = leia.nextInt();
+
+						do {
+							try {
+								System.out.println("\tSelecione o produto que deseja doar: ");
+								idProduto = leia.nextInt();
+								continuarCaseB = true;
+							} catch (Exception e) {
+								System.err.println("\nDigite apenas numeros!");
+								continuarCaseB = false;
+							}
+							continuarCaseB = true;
+						} while (continuarCaseB);
+
 						if (idProduto < 1 || idProduto > Produtos.length) {
 							System.out.println("ID do produto não válido!");
 						}

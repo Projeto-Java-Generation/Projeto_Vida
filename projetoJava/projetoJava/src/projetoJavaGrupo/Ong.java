@@ -1,9 +1,9 @@
 package projetoJavaGrupo;
+
 import java.util.List;
 
 public class Ong extends Pessoa {
 	private List<Estoque> estoque;
-
 
 	public Ong(String nomePessoa, String telefone, String documento, String string, List<Estoque> estoque) {
 		super(nomePessoa, telefone, documento, string);
@@ -19,7 +19,7 @@ public class Ong extends Pessoa {
 	}
 
 	public void exibirOngNova() {
-		System.out.println("\nSeus Dados:\nNome da ONG: " + getNomePessoa() + ", telefone de nº: " + getTelefone()
-				+ ", CNPJ: " + getDocumento() + " e localização: " + getLocalizacao() + "com produtos: " + estoque);
+		System.out.println("\n\tSeus Dados:\n" + "Nome: " + getNomePessoa() + "\nTelefone de Nº: " + getTelefone()
+				+ "\nIdentidade de Nº: " + getDocumento() + "\nLocalização: " + getLocalizacao() + "\nCom produtos: ");
 	}
 }

@@ -7,8 +7,6 @@ public class Pessoa {
 	private String documento;
 	private String localizacao;
 
-	
-
 	public Pessoa(String nomePessoa, String telefone, String documento, String localizacao) {
 		this.nomePessoa = nomePessoa;
 		this.telefone = telefone;
@@ -16,59 +14,42 @@ public class Pessoa {
 		this.localizacao = localizacao;
 	}
 
-
-
 	public String getNomePessoa() {
 		return nomePessoa;
 	}
-
-
 
 	public void setNomePessoa(String nomePessoa) {
 		this.nomePessoa = nomePessoa;
 	}
 
-
-
 	public String getTelefone() {
 		return telefone;
 	}
-
-
 
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
 
-
-
 	public String getDocumento() {
 		return documento;
 	}
 
-
-
 	public void setDocumento(String documento) {
 		this.documento = documento;
 	}
-
-
-
+  
 	public String getLocalizacao() {
 		return localizacao;
 	}
-
 
 
 	public void setLocalizacao(String localizacao) {
 		this.localizacao = localizacao;
 	}
 
-
-
 	public void exibir() {
-		System.out.println("\n\tSeus Dados:\n"+"Nome: " + nomePessoa + "\nTelefone de Nº: " + telefone
-				+ "\nIdentidade de nº: " + documento+ "\nLocalização: "+localizacao);
+		System.out.println("\n\tSeus Dados:\n" + "Nome: " + nomePessoa + "\nTelefone de Nº: " + telefone
+				+ "\nIdentidade de Nº: " + documento + "\nLocalização: " + localizacao);
 	}
 
 }
