@@ -19,7 +19,9 @@ public class Ong extends Pessoa {
 	}
 
 	public void exibirOngNova() {
-		System.out.println(Cor.TEXT_GREEN_BOLD+ "\n\tDados da ONG:\n" + "Nome: " + getNomePessoa() + "\nTelefone de Nº: " + getTelefone()
-				+ "\nIdentidade de Nº: " + getDocumento() + "\nLocalização: " + getLocalizacao() + "\nCom produtos: "+ Cor.TEXT_RESET);
+		System.out.println(Cor.TEXT_GREEN_BOLD + "\n\tDados da ONG:\n" + "Nome: " + getNomePessoa()
+				+ "\nTelefone de Nº: " + getTelefone()
+				+ "\nIdentidade de Nº: " + getDocumento() + "\nLocalização: " + getLocalizacao() + "\nCom produtos: "
+				+ Cor.TEXT_RESET);
 	}
 }
