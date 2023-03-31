@@ -216,7 +216,7 @@ public class menu {
 											continuarCaseB = false;
 											continuarCaseBo = true;
 										} else {
-											System.err.println("Senha incorreta!");
+											System.err.println(Cor.TEXT_RED_BOLD+"Senha incorreta!"+Cor.TEXT_RESET);
 										}
 									} while (continuarCaseB);
 								} else if (continuarCaseI == 2) {
@@ -244,28 +244,28 @@ public class menu {
 							System.out.println(Cor.TEXT_BLUE_UNDERLINED + "\t\t1 - OFERECER DOAÇÃO." + Cor.TEXT_RESET);
 							System.out.println(Cor.TEXT_BLUE_BOLD
 									+ "\n\tFicamos felizes com sua atitude, ela pode salvar vidas." + Cor.TEXT_RESET);
-							do {
-								try {
-									for (int i = 0; i < Produtos.length; i++) {
-										System.out.println(
-												Cor.TEXT_GREEN_BOLD + (i + 1) + " " + Produtos[i] + " = "
-														+ quantidade[i]);
-									}
-									System.out.println(Cor.TEXT_BLUE_BOLD
-											+ "\n\tPor favor, digite o ID do produto que deseja doar:"
-											+ Cor.TEXT_RESET);
-									idProduto = leia.nextInt();
-									if (idProduto < 1 || idProduto > Produtos.length) {
-										System.err.println(Cor.TEXT_RED_BOLD
-												+ "ID do produto não válido!" + Cor.TEXT_RESET);
-									} else {
-										continuarCaseB = false;
-									}
-								} catch (Exception e) {
-									System.err.println(Cor.TEXT_RED_BOLD + "ID do produto não válido!"
-											+ Cor.TEXT_RESET);
-								}
-							} while (continuarCaseB);
+									do {
+										try {
+											for (int i = 0; i < Produtos.length; i++) {
+												System.out.println(
+														Cor.TEXT_GREEN_BOLD + (i + 1) + " " + Produtos[i] + " = "
+																+ quantidade[i]);
+											}
+											System.out.println(Cor.TEXT_BLUE_BOLD
+													+ "\n\tPor favor, digite o ID do produto que deseja Doar:"
+													+ Cor.TEXT_RESET);
+											idProduto = leia.nextInt();
+											if (idProduto < 1 || idProduto > Produtos.length) {
+												System.err.println(Cor.TEXT_RED_BOLD
+														+ "ID do produto não válido!" + Cor.TEXT_RESET);
+											} else {
+												continuarCaseBo = false;
+											}
+										} catch (Exception e) {
+											System.err.println(Cor.TEXT_RED_BOLD + "ID do produto não válido!"
+													+ Cor.TEXT_RESET);
+										}
+									} while (continuarCaseBo);
 
 							System.out
 									.println(Cor.TEXT_BLUE_BOLD + "\n\tDigite a quantidade desejada:" + Cor.TEXT_RESET);
@@ -362,7 +362,7 @@ public class menu {
 									.println(Cor.TEXT_BLUE_BOLD + "\n\tDigite a quantidade desejada:" + Cor.TEXT_RESET);
 							quant = leia.nextInt();
 
-							quantidade[idProduto - 1] += quant;
+							quantidade[idProduto - 1] -= quant;
 							System.out.println(Cor.TEXT_BLUE_BOLD +
 									"==============================================================================================="
 									+ Cor.TEXT_RESET);
