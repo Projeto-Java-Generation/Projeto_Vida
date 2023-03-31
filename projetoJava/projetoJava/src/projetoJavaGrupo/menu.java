@@ -57,8 +57,6 @@ public class menu {
 		System.out.println("          BY!7J5G#&                                                              ");
 		System.out.println("         &GB&                                                                    \n");
 
-		// System.out.println(Cor.TEXT_GREEN_BOLD+
-		// "===============================================================================================");
 		System.out.println(Cor.TEXT_GREEN_BOLD +
 
 				"  8888888b.                     d8b          888            888     888 d8b      888           ");
@@ -102,19 +100,6 @@ public class menu {
 
 			System.out
 					.println(Cor.TEXT_WHITE_UNDERLINED + "\nEscolha sua localização" + Cor.ANSI_RESET + Cor.TEXT_RESET);
-
-			/*
-			 * System.out.println(Cor.
-			 * TEXT_WHITE+"\nDigite seu nome:                                   "+Cor.
-			 * TEXT_RESET);
-			 * nome = leia.nextLine();
-			 * System.out.println("\nDigite o nº do documento de identidade:            ");
-			 * doc = leia.nextLine();
-			 * System.out.println("\nDigite o nº do telefone:                           ");
-			 * tel = leia.nextLine();
-			 * System.out.println(zona);
-			 * System.out.println("\nEscolha sua localização                            ");
-			 */
 
 			localb = leia.nextInt();
 
@@ -223,90 +208,8 @@ public class menu {
 							System.out.println(
 									"\nnEnvie o produto para a Geração Guerreiro, 11 1234-1234. Av. Cruzeiro do Sul, 1000");
 						}
-						System.out.println("Voçe deseja continuar nessa página?");
-								System.out.println("1 - Sim\n 2 - Não");
-								continuarCaseI = leia.nextInt();
-								do {
-									try{
-								if(continuarCaseI == 2){
-									continuarCaseB = false;
-								}
-							} catch(Exception e) {System.err.println("ID inválido");}
-							} while(continuarCaseB);
 
 					} while (continuarCaseB);
-					/*
-					 * do {
-					 * try {
-					 * for (int i = 0; i < 3; i++) {
-					 * System.out.println((i + 1) + " " + Produtos[i]);
-					 * }
-					 * System.out.println("\tSelecione o produto que deseja doar: ");
-					 * idProduto = leia.nextInt();
-					 * if (idProduto < 1 || idProduto > 3) {
-					 * System.err.println("\nID do produto não válido!\n");
-					 * continuarCaseB = true;
-					 * }
-					 * else {
-					 * continuarCaseB = false;
-					 * }
-					 * } catch (Exception e) {
-					 * System.err.println("\nDigite apenas numeros");
-					 * leia.next();
-					 * }
-					 * 
-					 * } while(continuarCaseB);
-					 * 
-					 * do {
-					 * try {
-					 * System.out.println("\n\tInsira quantas unidades do produto (" +
-					 * Produtos[idProduto - 1]
-					 * + ") você deseja doar: ");
-					 * quant = leia.nextInt();
-					 * } catch (Exception e) {
-					 * System.err.println("Apenas números inteiros como quantidade");
-					 * leia.nextLine();
-					 * }
-					 * } while (quant < 1);
-					 * 
-					 * quantidade[idProduto - 1] += quant;
-					 * 
-					 * if (localb == 1) {
-					 * estoqueZonaLeste.add(new Estoque(Produtos[idProduto - 1], quant));
-					 * } else if (localb == 2) {
-					 * estoqueZonaOeste.add(new Estoque(Produtos[idProduto - 1], quant));
-					 * } else if (localb == 3) {
-					 * estoqueZonaSul.add(new Estoque(Produtos[idProduto - 1], quant));
-					 * } else if (localb == 4) {
-					 * estoqueZonaNorte.add(new Estoque(Produtos[idProduto - 1], quant));
-					 * }
-					 * 
-					 * for (Ong ong : ongs) {
-					 * List<Estoque> estoqueOng = ong.getEstoque();
-					 * for (Estoque estoque : estoqueOng) {
-					 * if (estoque.getNome().equals(Produtos[idProduto - 1])) {
-					 * System.out.println("\nObrigade! " + nome
-					 * + " por sua contribuição, ela vai fazer a diferença na vida de alguém!");
-					 * System.out.println(
-					 * "\nFoi doado " + estoque.getQuantidade() + " do produto "
-					 * + estoque.getNome()
-					 * + " para a ONG: " + ong.getNomePessoa());
-					 * System.out.
-					 * println("\nVeja como ficou nosso estoque depois da sua contribuição");
-					 * }
-					 * }
-					 * }
-					 * for (int i = 0; i < 3; i++) {
-					 * System.out.println((i + 1) + " " + Produtos[i] + " " + quantidade[i]);
-					 * }
-					 * System.out.
-					 * println("\t\tDeseja continuar na página de doação?\n1 - Sim\n2 - Não");
-					 * continuarCaseI = leia.nextInt();
-					 * if (continuarCaseI == 2) {
-					 * continuarCaseB = false;
-					 * }
-					 * } while (continuarCaseB);
-					 */
 					break;
 				case 2:
 					do {
