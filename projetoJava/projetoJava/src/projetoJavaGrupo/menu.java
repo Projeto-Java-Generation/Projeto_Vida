@@ -8,9 +8,11 @@ public class menu {
 	public static void main(String[] args) {
 		Scanner leia = new Scanner(System.in);
 
-		String[] Produtos = { "Cesta Básica", "Agasalho", "Água", "Roupas", "Calçados", "Cobertores", "Produtos de limpeza", "Brinquedos", "Livros" };
-		String zona = Cor.TEXT_BLUE_BOLD+"1 - Zona Leste\n2 - Zona Oeste\n3 - Zona Sul\n4 - Zona Norte"+Cor.TEXT_RESET;
-		String nome, tel, doc, nomeOng="", localizacao="";
+		String[] Produtos = { "Cesta Básica", "Agasalho", "Água", "Roupas", "Calçados", "Cobertores",
+				"Produtos de limpeza", "Brinquedos", "Livros" };
+		String zona = Cor.TEXT_GREEN_BOLD  + "1 - Zona Leste\n2 - Zona Oeste\n3 - Zona Sul\n4 - Zona Norte"
+				+ Cor.TEXT_RESET;
+		String nome, tel, doc, nomeOng = "", localizacao = "";
 
 		int[] quantidade = new int[Produtos.length];
 		for (int i = 0; i < Produtos.length; i++) {
@@ -26,7 +28,6 @@ public class menu {
 
 		boolean continuar = true, continuarCaseB = true, ongCadastradaB = false, continuarCaseBo = true;
 
-		List<Ong> ongs = new ArrayList<Ong>();
 		List<Estoque> estoqueOng = new ArrayList<Estoque>();
 		estoqueOng.add(new Estoque("Cesta Básica", 5));
 
@@ -90,22 +91,22 @@ public class menu {
 				"==============================================================================================="
 						+ Cor.TEXT_RESET);
 
-		System.out.println(Cor.TEXT_WHITE_UNDERLINED + "\nDigite seu nome:" + Cor.TEXT_RESET);
+		System.out.println(Cor.TEXT_BLUE_BOLD +"\nDigite seu nome:" + Cor.TEXT_RESET);
 
 		nome = leia.nextLine();
 
-		System.out.println(Cor.TEXT_WHITE_UNDERLINED + "\nDigite o nº do documento de identidade:" + Cor.TEXT_RESET);
+		System.out.println(Cor.TEXT_BLUE_BOLD +"\nDigite o nº do documento de identidade:" + Cor.TEXT_RESET);
 
 		doc = leia.nextLine();
 
-		System.out.println(Cor.TEXT_WHITE_UNDERLINED + "\nDigite o nº do telefone:" + Cor.TEXT_RESET);
+		System.out.println(Cor.TEXT_BLUE_BOLD + "\nDigite o nº do telefone:" + Cor.TEXT_RESET);
 
 		tel = leia.nextLine();
 		do {
 			System.out.println("\n" + zona);
 
 			System.out
-					.println(Cor.TEXT_WHITE_UNDERLINED + "\nEscolha sua localização" + Cor.ANSI_RESET + Cor.TEXT_RESET);
+					.println(Cor.TEXT_BLUE_BOLD + "\nEscolha sua localização" + Cor.TEXT_RESET);
 
 			localb = leia.nextInt();
 
@@ -142,15 +143,16 @@ public class menu {
 
 			System.out.println("                                                     ");
 			System.out.println(
-					Cor.TEXT_GREEN_BOLD + "               Bem-vinde "+nome+"!                     " + Cor.TEXT_RESET);
-			System.out.println(Cor.TEXT_BLUE_BOLD + "-----------------------------------------------------");
-			System.out.println("                                                     ");
+					Cor.TEXT_GREEN_BOLD + "               Bem-vinde " + nome + "!                     "
+							+ Cor.TEXT_RESET);
+			System.out.println(Cor.TEXT_BLUE_BOLD + "-----------------------------------------------------"+ Cor.TEXT_RESET);
+			System.out.println(Cor.TEXT_GREEN_BOLD +"                                                     ");
 			System.out.println("            1 - OFERECER DOAÇÃO.                     ");
 			System.out.println("            2 - SOLICITAR DOAÇÃO.                    ");
 			System.out.println("            3 - INFORMAÇÕES ÚTEIS.                   ");
 			System.out.println("            4 - CADASTRO DE ONGS.                    ");
-			System.out.println("            5 - ENCERRAR.                            ");
-			System.out.println("-----------------------------------------------------");
+			System.out.println("            5 - ENCERRAR.                            "+ Cor.TEXT_RESET);
+			System.out.println(Cor.TEXT_BLUE_BOLD +"-----------------------------------------------------");
 			System.out.println("                                                     ");
 			System.out.println("            Digite a opção desejada:                 ");
 
@@ -158,22 +160,25 @@ public class menu {
 
 			opcao = leia.nextInt();
 			switch (opcao) {
+
 				case 1:
+					
 						while (ongCadastradaB) {
 							try {
 								System.out.println(Cor.TEXT_GREEN_BOLD + "Nova ONG registrada (" + nomeOng
-										+ ") no sistema, deseja inserir produtos nela?"+ Cor.TEXT_RESET);
-								System.out.println(Cor.TEXT_BLUE_BOLD + "1 - Sim\n2 - Não"+ Cor.TEXT_RESET);
+										+ ") no sistema, deseja inserir produtos nela?" + Cor.TEXT_RESET);
+								System.out.println(Cor.TEXT_BLUE_BOLD + "1 - Sim\n2 - Não" + Cor.TEXT_RESET);
 								continuarCaseI = leia.nextInt();
 								if (continuarCaseI == 1) {
 									do {
-										System.out.println(Cor.TEXT_BLUE_BOLD + "Digite a senha da ONG"+ Cor.TEXT_RESET);
+										System.out
+												.println(Cor.TEXT_BLUE_BOLD + "Digite a senha da ONG" + Cor.TEXT_RESET);
 										int testaSenha = leia.nextInt();
 										if (testaSenha == senhaOng) {
 											do {
 												try {
 													continuarCaseB = true;
-													for (int i = 0;i < Produtos.length; i++) {
+													for (int i = 0; i < Produtos.length; i++) {
 														System.out.println(
 																Cor.TEXT_GREEN_BOLD + (i + 1) + " " + Produtos[i]
 																		+ " = " + ongQuantidade[i]);
@@ -203,7 +208,7 @@ public class menu {
 													+ Cor.TEXT_RESET);
 											System.out.println(Cor.TEXT_GREEN_BOLD
 													+ "\n\tProduto Inserido! Confira estoque da ONG:");
-											for (int i = 0;i < Produtos.length; i++) {
+											for (int i = 0; i < Produtos.length; i++) {
 												System.out.println(Cor.TEXT_GREEN_BOLD + (i + 1) + " " + Produtos[i]
 														+ " = " + ongQuantidade[i]
 														+ Cor.TEXT_RESET);
@@ -223,77 +228,98 @@ public class menu {
 								System.err.println("Digite apenas números inteiros");
 							}
 						}
-						if(continuarCaseBo){
-						System.out.println(Cor.TEXT_BLUE_BOLD + "\t    __..,,... .,,,,,.");
-						System.out.println("\t''''        ,'        ` .");
-						System.out.println("\t          ,'  ,.  ..      `  .");
-						System.out.println("\t          `.,'      ..           `");
-						System.out.println("\t__..,.             .  ..     .");
-						System.out.println("\t       ` .       .  `.  .` `");
-						System.out.println("\t           ,  `.  `.  `._,..");
-						System.out.println("\t             .  `.  `..'");
-						System.out.println("\t              ` -'`''");
-						System.out.println(Cor.TEXT_BLUE_UNDERLINED + "\t\t1 - OFERECER DOAÇÃO." + Cor.TEXT_RESET);
-						System.out.println(Cor.TEXT_BLUE_BOLD
-								+ "\n\tFicamos felizes com sua atitude, ela pode salvar vidas." + Cor.TEXT_RESET);
-						do {
-							try {
-								for (int i = 0;i < Produtos.length; i++) {
-									System.out.println(
-											Cor.TEXT_GREEN_BOLD + (i + 1) + " " + Produtos[i] + " = " + quantidade[i]);
+						if (continuarCaseBo) {
+							do{
+
+							
+							System.out.println(Cor.TEXT_BLUE_BOLD + "\t    __..,,... .,,,,,.");
+							System.out.println("\t''''        ,'        ` .");
+							System.out.println("\t          ,'  ,.  ..      `  .");
+							System.out.println("\t          `.,'      ..           `");
+							System.out.println("\t__..,.             .  ..     .");
+							System.out.println("\t       ` .       .  `.  .` `");
+							System.out.println("\t           ,  `.  `.  `._,..");
+							System.out.println("\t             .  `.  `..'");
+							System.out.println("\t              ` -'`''");
+							System.out.println(Cor.TEXT_BLUE_UNDERLINED + "\t\t1 - OFERECER DOAÇÃO." + Cor.TEXT_RESET);
+							System.out.println(Cor.TEXT_BLUE_BOLD
+									+ "\n\tFicamos felizes com sua atitude, ela pode salvar vidas." + Cor.TEXT_RESET);
+							do {
+								try {
+									for (int i = 0; i < Produtos.length; i++) {
+										System.out.println(
+												Cor.TEXT_GREEN_BOLD + (i + 1) + " " + Produtos[i] + " = "
+														+ quantidade[i]);
+									}
+									System.out.println(Cor.TEXT_BLUE_BOLD
+											+ "\n\tPor favor, digite o ID do produto que deseja doar:"
+											+ Cor.TEXT_RESET);
+									idProduto = leia.nextInt();
+									if (idProduto < 1 || idProduto > Produtos.length) {
+										System.err.println(Cor.TEXT_RED_BOLD
+												+ "ID do produto não válido!" + Cor.TEXT_RESET);
+									} else {
+										continuarCaseB = false;
+									}
+								} catch (Exception e) {
+									System.err.println(Cor.TEXT_RED_BOLD + "ID do produto não válido!"
+											+ Cor.TEXT_RESET);
 								}
-								System.out.println(Cor.TEXT_BLUE_BOLD
-										+ "\n\tPor favor, digite o ID do produto que deseja doar:" + Cor.TEXT_RESET);
-								idProduto = leia.nextInt();
-								if (idProduto < 1 || idProduto > Produtos.length) {
-									System.err
-											.println(Cor.TEXT_RED_BOLD + "ID do produto não válido!" + Cor.TEXT_RESET);
-								}
-							} catch (Exception e) {
-								System.err.println(Cor.TEXT_RED_BOLD + "ID do produto não válido!" + Cor.TEXT_RESET);
+							} while (continuarCaseB);
+
+							System.out
+									.println(Cor.TEXT_BLUE_BOLD + "\n\tDigite a quantidade desejada:" + Cor.TEXT_RESET);
+							quant = leia.nextInt();
+
+							quantidade[idProduto - 1] += quant;
+							System.out.println(Cor.TEXT_BLUE_BOLD +
+									"==============================================================================================="
+									+ Cor.TEXT_RESET);
+							System.out
+									.println(Cor.TEXT_GREEN_BOLD + "\n\tDoação realizada! Confira nosso estoque atual");
+							for (int i = 0; i < Produtos.length; i++) {
+								System.out.println(
+										Cor.TEXT_GREEN_BOLD + (i + 1) + " " + Produtos[i] + " = " + quantidade[i]
+												+ Cor.TEXT_RESET);
 							}
-						} while (continuarCaseB);
+							System.out.println(Cor.TEXT_BLUE_BOLD
+									+ "\n\nNós do Projeto Vida agradecemos por sua contribuição, ela vai fazer a diferença na vida de alguém!"
+									+ Cor.TEXT_RESET);
+							if (localb == 1) {
+								System.out.println(Cor.TEXT_GREEN_BOLD
+										+ "\nSua doação foi enviada para a ONG Doa Brasil, 11-1234-5678. Av. Itaquera, 1000"
+										+ Cor.TEXT_RESET);
+							}
+							if (localb == 2) {
+								System.out.println(Cor.TEXT_GREEN_BOLD +
+										"\nSua doação foi enviada para a ONG Vidas que importam, 11-8765-4321. Av. Paulista, 5000"
+										+ Cor.TEXT_RESET);
+							}
+							if (localb == 3) {
+								System.out.println(Cor.TEXT_GREEN_BOLD +
+										"\nSua doação foi enviada para a ONG Pró Vida, 11 1234-1234. Av. Belmira Marim, 510"
+										+ Cor.TEXT_RESET);
+							}
+							if (localb == 4) {
+								System.out.println(Cor.TEXT_GREEN_BOLD +
+										"\nSua doação foi enviada para a ONG Geração Guerreiro, 11 1234-1234. Av. Cruzeiro do Sul, 1000"
+										+ Cor.TEXT_RESET);
+							}
+							do {
 
-						System.out.println(Cor.TEXT_BLUE_BOLD + "\n\tDigite a quantidade desejada:" + Cor.TEXT_RESET);
-						quant = leia.nextInt();
+								System.out.println(Cor.TEXT_BLUE_BOLD+"\nVoçê deseja continuar nessa página?"+ Cor.TEXT_RESET);
+								System.out.println(Cor.TEXT_GREEN_BOLD+"1 - Sim\n2 - Não"+Cor.TEXT_RESET);
+								opcao = leia.nextInt();
+		
+							} while (opcao < 1 || opcao > 2);
 
-						quantidade[idProduto - 1] += quant;
-						System.out.println(Cor.TEXT_BLUE_BOLD +
-								"==============================================================================================="
-								+ Cor.TEXT_RESET);
-						System.out.println(Cor.TEXT_GREEN_BOLD + "\n\tDoação realizada! Confira nosso estoque atual");
-						for (int i = 0;i < Produtos.length; i++) {
-							System.out.println(Cor.TEXT_GREEN_BOLD + (i + 1) + " " + Produtos[i] + " = " + quantidade[i]
-									+ Cor.TEXT_RESET);
-						}
-						System.out.println(Cor.TEXT_BLUE_BOLD + "\nObrigade! " + nome
-								+ " por sua contribuição, ela vai fazer a diferença na vida de alguém!"
-								+ Cor.TEXT_RESET);
-						if (localb == 1) {
-							System.out.println(Cor.TEXT_GREEN_BOLD
-									+ "\nEnvie o produto para a Doa Brasil, 11-1234-5678. Av. Itaquera, 1000"
-									+ Cor.TEXT_RESET);
-						}
-						if (localb == 2) {
-							System.out.println(Cor.TEXT_GREEN_BOLD +
-									"\nnEnvie o produto para a Vidas que importam, 11-8765-4321. Av. Paulista, 5000"
-									+ Cor.TEXT_RESET);
-						}
-						if (localb == 3) {
-							System.out.println(Cor.TEXT_GREEN_BOLD +
-									"\nnEnvie o produto para a Pró Vida, 11 1234-1234. Av. Belmira Marim, 510"
-									+ Cor.TEXT_RESET);
-						}
-						if (localb == 4) {
-							System.out.println(Cor.TEXT_GREEN_BOLD +
-									"\nnEnvie o produto para a Geração Guerreiro, 11 1234-1234. Av. Cruzeiro do Sul, 1000"
-									+ Cor.TEXT_RESET);
-						}
-						continuarCaseBo = true;
+							continuarCaseBo = true;
+
+						}while (opcao==1);
 					}
+					
 					break;
 				case 2:
-					do {
 						continuarCaseB = true;
 						System.out.println(Cor.TEXT_BLUE_BOLD + "\t    __..,,... .,,,,,.");
 						System.out.println("\t''''        ,'        ` .");
@@ -305,35 +331,45 @@ public class menu {
 						System.out.println("\t             .  `.  `..'");
 						System.out.println("\t              ` -'`''");
 						System.out.println(Cor.TEXT_BLUE_UNDERLINED + "\t\t2 - SOLICITAR DOAÇÃO." + Cor.TEXT_RESET);
-						for (int i = 0;i < Produtos.length; i++) {
+						for (int i = 0; i < Produtos.length; i++) {
 							System.out.println(Cor.TEXT_GREEN_BOLD + (i + 1) + " " + Produtos[i] + " = " + quantidade[i]
 									+ Cor.TEXT_RESET);
 						}
-						System.out.println(Cor.TEXT_BLUE_BOLD
-								+ "\n\tPor favor, selecione o produto que deseja solicitar: " + Cor.TEXT_RESET);
-						idProduto = leia.nextInt();
-						if (idProduto < 1 || idProduto > Produtos.length) {
-							System.err.println(Cor.TEXT_RED_BOLD + "ID do produto não válido!" + Cor.TEXT_RESET);
-						}
 						do {
-							continuarCaseB = true;
-							System.out
+							try {
+								for (int i = 0; i < Produtos.length; i++) {
+									System.out.println(
+											Cor.TEXT_GREEN_BOLD + (i + 1) + " " + Produtos[i] + " = "
+													+ quantidade[i]);
+								}
+								System.out.println(Cor.TEXT_BLUE_BOLD
+										+ "\n\tPor favor, digite o ID do produto que deseja solicitar:"
+										+ Cor.TEXT_RESET);
+								idProduto = leia.nextInt();
+								if (idProduto < 1 || idProduto > Produtos.length) {
+									System.err.println(Cor.TEXT_RED_BOLD
+											+ "ID do produto não válido!" + Cor.TEXT_RESET);
+								} else {
+									continuarCaseB = false;
+								}
+							} catch (Exception e) {
+								System.err.println(Cor.TEXT_RED_BOLD + "ID do produto não válido!"
+										+ Cor.TEXT_RESET);
+							}
+						} while (continuarCaseB);
+
+						System.out
 									.println(Cor.TEXT_BLUE_BOLD + "\n\tDigite a quantidade desejada:" + Cor.TEXT_RESET);
 							quant = leia.nextInt();
 
-							if (quant < 1 || quant > quantidade[idProduto - 1]) {
-								System.err.println(
-										Cor.TEXT_RED_BOLD + "Quantidade inserida não válida!" + Cor.TEXT_RESET);
-							} else {
-								quantidade[idProduto - 1] -= quant;
-								continuarCaseB = false;
-							}
-						} while (continuarCaseB);
-					} while (continuarCaseB);
+							quantidade[idProduto - 1] += quant;
+							System.out.println(Cor.TEXT_BLUE_BOLD +
+									"==============================================================================================="
+									+ Cor.TEXT_RESET);
 
 					System.out.println(
 							Cor.TEXT_BLUE_BOLD + "\n\tDoação solicitada! Confira nosso estoque atual" + Cor.TEXT_RESET);
-					for (int i = 0;i < Produtos.length; i++) {
+					for (int i = 0; i < Produtos.length; i++) {
 						System.out.println(Cor.TEXT_GREEN_BOLD + (i + 1) + " " + Produtos[i] + " = " + quantidade[i]
 								+ Cor.TEXT_RESET);
 					}
@@ -356,6 +392,7 @@ public class menu {
 						System.out.println(Cor.TEXT_GREEN_BOLD
 								+ "\nGeração Guerreiro, 11 1234-1234. Av. Cruzeiro do Sul, 1000" + Cor.TEXT_RESET);
 					}
+				
 					break;
 
 				case 3:
@@ -399,14 +436,14 @@ public class menu {
 
 				case 4:
 					leia.nextLine();
-					System.out.println(Cor.TEXT_BLUE_UNDERLINED + "4 - CADASTRO DE ONGS." + Cor.TEXT_RESET);
-					System.out.println(Cor.TEXT_WHITE_UNDERLINED + "Digite o nome da ONG:" + Cor.TEXT_RESET);
+					System.out.println(Cor.TEXT_BLUE_UNDERLINED + "\n4 - CADASTRO DE ONGS.\n" + Cor.TEXT_RESET);
+					System.out.println(Cor.TEXT_BLUE_BOLD + "Digite o nome da ONG:" + Cor.TEXT_RESET);
 					nomeOng = leia.nextLine();
-					System.out.println(Cor.TEXT_WHITE_UNDERLINED + "Digite o telefone da ONG:");
+					System.out.println(Cor.TEXT_BLUE_BOLD + "\nDigite o telefone da ONG:"+ Cor.TEXT_RESET);
 					String telOng = leia.nextLine();
-					System.out.println(Cor.TEXT_WHITE_UNDERLINED + "Digite o nº o CNPJ da ONG:" + Cor.TEXT_RESET);
+					System.out.println(Cor.TEXT_BLUE_BOLD +  "\nDigite o nº o CNPJ da ONG:" + Cor.TEXT_RESET);
 					String docOng = leia.nextLine();
-					System.out.println(Cor.TEXT_GREEN + zona + Cor.TEXT_RESET + "\n" + Cor.TEXT_WHITE_UNDERLINED
+					System.out.println(Cor.TEXT_GREEN_BOLD + zona + Cor.TEXT_RESET + "\n" + Cor.TEXT_BLUE_BOLD
 							+ "Digite o nº referente a  localização da ONG:" + Cor.TEXT_RESET);
 					int localizacaoZ = leia.nextInt();
 					switch (localizacaoZ) {
@@ -428,7 +465,7 @@ public class menu {
 					}
 					do {
 						try {
-							System.out.println("Digite uma senha para ela (apenas números inteiros): ");
+							System.out.println(Cor.TEXT_BLUE_BOLD + "\nDigite uma senha para ela (apenas números inteiros): "+ Cor.TEXT_RESET);
 							senhaOng = leia.nextInt();
 						} catch (Exception e) {
 							System.err.println(Cor.TEXT_RED_BOLD + "Digite apenas numeros inteiros!" + Cor.TEXT_RESET);
@@ -439,7 +476,8 @@ public class menu {
 					ongCadastradaB = true;
 					break;
 				case 5:
-					System.out.println(Cor.TEXT_GREEN_BOLD + "\nSoftware finalizado." + Cor.TEXT_RESET);
+					System.out.println(Cor.TEXT_GREEN_BOLD
+							+ "\nObrigade por usar nossa plataforma! Esperamos ver você em breve!" + Cor.TEXT_RESET);
 					continuar = false;
 					break;
 
@@ -449,5 +487,7 @@ public class menu {
 			}
 			continuarCaseBo = true;
 		} while (continuar);
+
+		leia.close();
 	}
 }
