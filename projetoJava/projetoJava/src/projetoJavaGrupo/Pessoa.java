@@ -48,8 +48,12 @@ public class Pessoa {
 	}
 
 	public void exibir() {
-		System.out.println("\n\tSeus Dados:\n" + "Nome: " + nomePessoa + "\nTelefone de Nº: " + telefone
-				+ "\nIdentidade de Nº: " + documento + "\nLocalização: " + localizacao);
+		System.out.println(
+			Cor.TEXT_GREEN_BOLD+"\n\tSeus Dados:"+Cor.TEXT_RESET
+		 	+ Cor.TEXT_BLUE_BOLD + "\nNome: " + Cor.TEXT_GREEN_BOLD + nomePessoa+Cor.TEXT_RESET
+			+ Cor.TEXT_BLUE_BOLD + "\nTelefone de Nº: " + Cor.TEXT_GREEN_BOLD + telefone+Cor.TEXT_RESET
+			+ Cor.TEXT_BLUE_BOLD + "\nIdentidade de Nº: " + Cor.TEXT_GREEN_BOLD + documento+Cor.TEXT_RESET
+			+ Cor.TEXT_BLUE_BOLD + "\nLocalização: " + Cor.TEXT_GREEN_BOLD + localizacao+Cor.TEXT_RESET);
 	}
 
 }
